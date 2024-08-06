@@ -29,9 +29,15 @@ namespace attackServer
             //Console.ReadLine();
 
             //3
-            Task<string> TaskA = GetDataFromServiceAAsync();
-            Task<string> TaskB = GetDataFromServiceBAsync();
-            await Task.WhenAll(TaskA, TaskB);
+            //Task<string> TaskA = GetDataFromServiceAAsync();
+            //Task<string> TaskB = GetDataFromServiceBAsync();
+            //await Task.WhenAll(TaskA, TaskB);
+
+            //4
+            Node node2 = new Node();
+            Node node = new Node(16,node2);
+            Console.WriteLine(node.ToString());
+            Console.ReadLine();
 
         }
 
