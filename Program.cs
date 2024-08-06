@@ -17,6 +17,7 @@ namespace attackServer
         {
 
 
+
             //2
             //string path = "C:\\Users\\INTERNET\\source\\Core8\\attackServer\\TextFile1.txt";
 
