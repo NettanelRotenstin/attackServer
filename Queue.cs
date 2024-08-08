@@ -17,7 +17,7 @@ namespace attackServer
         {
             this.SetHead(null);
             this.SetTail(null);
-            this._count = 0;
+            this.SetCount(0);
         }
 
         public void Enqueue(T value)
@@ -35,7 +35,7 @@ namespace attackServer
                 this.SetTail(newNode);
             }
 
-            this._count++;
+            this.SetCount(this.GetCount() + 1);
 
         }
 
@@ -53,10 +53,10 @@ namespace attackServer
                 {
                     this.SetTail(null);
                 }
-                _count--;
+                this.SetCount(this.GetCount() - 1);
                 return value;
             }
-             
+
         }
 
         private bool IsEmpty()
@@ -69,7 +69,7 @@ namespace attackServer
             _haed = head;
         }
 
-        public void SetTail(Node<T> tail) 
+        public void SetTail(Node<T> tail)
         {
             _tail = tail;
         }
@@ -81,8 +81,20 @@ namespace attackServer
 
         public Node<T> GetTail()
         {
-            return _tail;
+            return this._tail;
         }
 
+        public int GetCount()
+        {
+            return this._count;
+        }
+        public void SetCount(int count)
+        {
+            this._count = count;
+        }
+        public int Peek()
+        {
+            return this.Peek();
+        }
     }
 }
